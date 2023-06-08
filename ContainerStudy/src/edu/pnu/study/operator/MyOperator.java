@@ -6,7 +6,7 @@ public abstract class MyOperator {
 
 	private String cmd;
 	private Calendar createdTime;
-	private Calendar lastUsedTime;
+	private Calendar lastUsedTime; //마지막으로 사용 된 시간 변수
 	
 	public MyOperator(String cmd) {
 		this.cmd = cmd;
