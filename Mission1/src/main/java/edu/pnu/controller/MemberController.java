@@ -33,11 +33,19 @@ public class MemberController {
 		return memberService.getMembers();
 	}
 
-	@GetMapping("/member/{id}")
+	//localhost:8080/member/1
+	@GetMapping("/member/{id}")//전형적인 restAPI에서 데이터를 가져올때 쓰는 방식 : /id쓰면 된다
 	public MemberVO getMember(@PathVariable Integer id) {
 		log.info("getMember()");
 		return memberService.getMember(id);
 	}
+	
+	//localhost:8080/member?id=1
+//	@GetMapping("/member")//member를 호출하여 ?id=얼마 이렇게 파라미터로 불러와 호출
+//	public MemberVO getMember(Integer id) { //?id = 얼마라는 값이 id로 들어가 호출
+//		log.info("getMember()");
+//		return memberService.getMember(id);
+//	}
 	
 	@PostMapping("/member")
 	public MemberVO addMember(MemberVO member) {
