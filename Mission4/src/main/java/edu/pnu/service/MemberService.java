@@ -35,7 +35,7 @@ public class MemberService {
 		return (int) maps.get("result");
 	}
 	public int updateMember(MemberVO member) {
-		Map<String, Object> mas = memberDao.updateMember(member);
+		Map<String, Object> maps = memberDao.updateMember(member);
 		logDao.addLog(maps);
 		//return (int) maps.get("result");
 		int ret =  (int) maps.get("result");
