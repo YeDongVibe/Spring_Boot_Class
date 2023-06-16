@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.stereotype.Repository;
-
 public class MemberLogDao {
 
 	private String driver = "org.h2.Driver";
