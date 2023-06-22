@@ -48,7 +48,7 @@ public class DynamicQueryTest {
 				builder.and(qboard.title.like("%" + map.get("TITLE") + "%"));
 			} else if (key.equals("CONTENT")) {
 				// select b from Board b where b.content like '%'||:searchKeyword||'%'
-				builder.and(qboard.content.like("%" + map.get("CONTENT") + "%"));
+				builder.or(qboard.content.like("%" + map.get("CONTENT") + "%"));
 			}
 		}
 		Iterable<Board> list = boardRepo.findAll(builder);
