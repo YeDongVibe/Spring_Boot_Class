@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>
+		<font color="blue">loginError 발생발생</font>
+	</h1>
+	<a th:href="@{/}">메인 화면으로 고고링</a>
+	<hr>
+	<table>
+		<tr>
+			<th bgcolor="blue" align="left">예외 메시지 : [[${exception.message}]]</th>
+		</tr>
+		<!--		<tr th:each="trace : ${exception.stackTrace}">-->
+		<!--			<td th:text="${trace}">-->
+		<!--		</tr>-->
+		<tr>
+			<td><a href="/login">로그인</a></td>
+		</tr>
+	</table>
+</body>
+
+</html>
