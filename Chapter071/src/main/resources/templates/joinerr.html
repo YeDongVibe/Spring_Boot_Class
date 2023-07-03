@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>회원가입오류</title>
+</head>
+
+<body th:align="center">
+	<h1 style="color: red">!ERROR!</h1>
+	<h2>Username과 Password 중 </br> 입력한 값이 존재하지 않아유</h2>
+<!--	<span th:text="${errorMsg}">}</span><br>-->
+	<a th:href="@{/join}">가입하러 Go!Go!</a>
+</body>
+
+</html>
